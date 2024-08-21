@@ -1,2 +1,3 @@
 /setup.py
 dist/
+request_logger.egg-info/
