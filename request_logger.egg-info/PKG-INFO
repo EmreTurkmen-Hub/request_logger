@@ -1,3 +1,15 @@
+Metadata-Version: 2.1
+Name: request-logger
+Version: 1.1
+Home-page: https://github.com/EmreTurkmen-Hub/request-logger
+Author: Emre Türkmen
+Author-email: emre@parsyazilim.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # Request Logger Module
 
 This Python module is designed to log and store incoming HTTP requests in a Django application. It helps developers track and analyze request data, including headers, methods, and payloads.
@@ -34,7 +46,7 @@ This Python module is designed to log and store incoming HTTP requests in a Djan
     ```python
     MIDDLEWARE = [
         # other middleware
-        'request_logger.middleware.request_logger.userLogCheck',
+        'request_logger.middleware.request_logger.request_logger',
     ]
     ```
 
@@ -64,60 +76,60 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-# Request Logger Modülü
+# Request Logger ModÃ¼lÃ¼
 
-Bu Python modülü, bir Django uygulamasında gelen HTTP isteklerini kaydetmek ve saklamak için tasarlanmıştır. Geliştiricilere, başlıklar, yöntemler ve payloadlar dahil olmak üzere istek verilerini izleme ve analiz etme imkanı sunar.
+Bu Python modÃ¼lÃ¼, bir Django uygulamasÄ±nda gelen HTTP isteklerini kaydetmek ve saklamak iÃ§in tasarlanmÄ±ÅŸtÄ±r. GeliÅŸtiricilere, baÅŸlÄ±klar, yÃ¶ntemler ve payloadlar dahil olmak Ã¼zere istek verilerini izleme ve analiz etme imkanÄ± sunar.
 
-## Özellikler
+## Ã–zellikler
 - HTTP isteklerini kaydetme ve saklama.
-- GET, POST, PUT, DELETE ve diğer HTTP yöntemleri için destek.
-- İstekleri yöntem veya URL'ye göre filtreleme yeteneği.
+- GET, POST, PUT, DELETE ve diÄŸer HTTP yÃ¶ntemleri iÃ§in destek.
+- Ä°stekleri yÃ¶ntem veya URL'ye gÃ¶re filtreleme yeteneÄŸi.
 - Django projeleri ile kolay entegrasyon.
 
 ## Kurulum
 
-1. **Pip ile paketi yükleyin:**
+1. **Pip ile paketi yÃ¼kleyin:**
 
     ```bash
     pip install request-logger
     ```
 
-2. **`request_logger` modülünü Django `INSTALLED_APPS` listenize ekleyin:**
+2. **`request_logger` modÃ¼lÃ¼nÃ¼ Django `INSTALLED_APPS` listenize ekleyin:**
 
-    `settings.py` dosyanızı açın ve `INSTALLED_APPS` listesine `request_logger` ekleyin:
+    `settings.py` dosyanÄ±zÄ± aÃ§Ä±n ve `INSTALLED_APPS` listesine `request_logger` ekleyin:
 
     ```python
     INSTALLED_APPS = [
-        # diğer uygulamalar
+        # diÄŸer uygulamalar
         'request_logger',
     ]
     ```
 
 3. **Request Logger Middleware'ini Ekleyin:**
 
-    `settings.py` dosyanızda `MIDDLEWARE` listesine `request_logger` middleware'ini dahil edin:
+    `settings.py` dosyanÄ±zda `MIDDLEWARE` listesine `request_logger` middleware'ini dahil edin:
 
     ```python
     MIDDLEWARE = [
-        # diğer middleware'ler
-        'request_logger.middleware.request_logger.userLogCheck',
+        # diÄŸer middleware'ler
+        'request_logger.middleware.request_logger.request_logger',
     ]
     ```
 
-4. **Gerekli Veritabanı Tablolarını Oluşturmak İçin Migrations İşlemini Çalıştırın:**
+4. **Gerekli VeritabanÄ± TablolarÄ±nÄ± OluÅŸturmak Ä°Ã§in Migrations Ä°ÅŸlemini Ã‡alÄ±ÅŸtÄ±rÄ±n:**
 
-    Gerekli veritabanı tablolarını oluşturmak için migrations işlemini uygulayın:
+    Gerekli veritabanÄ± tablolarÄ±nÄ± oluÅŸturmak iÃ§in migrations iÅŸlemini uygulayÄ±n:
 
     ```bash
     python manage.py migrate
     ```
 
-## Kullanım
+## KullanÄ±m
 
 
-1. **Kaydedilen İstekleri Yönteme Göre Filtreleyin:**
+1. **Kaydedilen Ä°stekleri YÃ¶nteme GÃ¶re Filtreleyin:**
 
-    Kaydedilen istekleri yöntemine göre filtreleyebilirsiniz:
+    Kaydedilen istekleri yÃ¶ntemine gÃ¶re filtreleyebilirsiniz:
 
     ```python
     from request_logger.models import userLog
@@ -127,4 +139,4 @@ Bu Python modülü, bir Django uygulamasında gelen HTTP isteklerini kaydetmek v
 
 ## Lisans
 
-Bu proje MIT Lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje MIT LisansÄ± altÄ±nda lisanslanmÄ±ÅŸtÄ±r - detaylar iÃ§in [LICENSE](LICENSE) dosyasÄ±na bakÄ±n.
